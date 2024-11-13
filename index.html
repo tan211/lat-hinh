@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Custom Css Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .game-container {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            background-image: linear-gradient(90deg, #fffbd5, #ccc);
+        }
+        .heading-container {
+            text-align: center;
+        }
+        
+        .gfg-heading {
+            color: #0E9D57;
+        }
+        .progress-container {
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        
+        .restart-button {
+            padding: 10px 20px;
+            background-color: #0E9D57;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .restart-button:hover {
+            background-color: transparent;
+            border: 1px solid #0E9D57;
+            color: #0E9D57;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="overflow-hidden">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 20px;border-radius: 25px;">
+            <div class="container-fluid" style="text-align:center;display:block">
+                <strong class="navbar-brand">Xin chào, ngu</strong>
+                <a class="navbar-brand primary-color" href="https://dksclub.org">Trang chủ</a>
+                <a class="navbar-brand primary-color" href="https://dksclub.org/xep-hinh">Thử thách 1</a>
+                <a class="navbar-brand primary-color" href="https://dksclub.org/lich-su">Lịch sử nộp đáp án</a>
+                <a class="navbar-brand primary-color" href="https://dksclub.org/dang-xuat">Đăng xuất</a>
+
+            </div>
+        </nav>
+        <header class="primary-background">
+            <!-- step number -->
+            <div class="step-count">
+                <img class="float-left" style="padding:5px" src="assets/images/xoa-nen-logo.png" width="100px" />
+                <h1 style="padding-top:30px">DKS SKILL 2024</h1>
+            </div>
+
+        </header>
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+            <div class="h-100 mt-4">
+                <!-- <form method="post" class="" action="https://dksclub.org/gui-dap-an"> -->
+                    <div class="container">
+                        <div id="dynamic-cards" class="game-container">
+                            <div class="heading-container">
+                                <h1 class="gfg-heading">
+                                    Lật mặt 8
+                                </h1>
+                                <h2 class="game-heading">Hay thì like</h2>
+                            </div>
+                            <section class="memory-game">
+                                <div class="memory-card" data-framework="aurelia">
+                                  <img class="front-face" src="assets/images/quiz/minh.jpg" alt="Aurelia" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="aurelia">
+                                  <img class="front-face" src="assets/images/quiz/minh.jpg" alt="Aurelia" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="vue">
+                                  <img class="front-face" src="assets/images/quiz/nguyen.jpg" alt="Vue" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="vue">
+                                  <img class="front-face" src="assets/images/quiz/nguyen.jpg" alt="Vue" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="angular">
+                                  <img class="front-face" src="assets/images/quiz/phuong.jpg" alt="Angular" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="angular">
+                                  <img class="front-face" src="assets/images/quiz/phuong.jpg" alt="Angular" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="ember">
+                                  <img class="front-face" src="assets/images/quiz/thuan.jpg" alt="Ember" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="ember">
+                                  <img class="front-face" src="assets/images/quiz/thuan.jpg" alt="Ember" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="backbone">
+                                  <img class="front-face" src="assets/images/quiz/vy.jpg" alt="Backbone" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="backbone">
+                                  <img class="front-face" src="assets/images/quiz/vy.jpg" alt="Backbone" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="react">
+                                  <img class="front-face" src="assets/images/quiz/tram.jpg" alt="React" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="react">
+                                  <img class="front-face" src="assets/images/quiz/tram.jpg" alt="React" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="aurelia">
+                                  <img class="front-face" src="assets/images/quiz/minh.jpg" alt="Aurelia" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="aurelia">
+                                  <img class="front-face" src="assets/images/quiz/minh.jpg" alt="Aurelia" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="vue">
+                                  <img class="front-face" src="assets/images/quiz/nguyen.jpg" alt="Vue" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="vue">
+                                  <img class="front-face" src="assets/images/quiz/nguyen.jpg" alt="Vue" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="angular">
+                                  <img class="front-face" src="assets/images/quiz/phuong.jpg" alt="Angular" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="angular">
+                                  <img class="front-face" src="assets/images/quiz/phuong.jpg" alt="Angular" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="ember">
+                                  <img class="front-face" src="assets/images/quiz/thuan.jpg" alt="Ember" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="ember">
+                                  <img class="front-face" src="assets/images/quiz/thuan.jpg" alt="Ember" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="backbone">
+                                  <img class="front-face" src="assets/images/quiz/vy.jpg" alt="Backbone" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="backbone">
+                                  <img class="front-face" src="assets/images/quiz/vy.jpg" alt="Backbone" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="react">
+                                  <img class="front-face" src="assets/images/quiz/tram.jpg" alt="React" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="react">
+                                  <img class="front-face" src="assets/images/quiz/tram.jpg" alt="React" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="aurelia">
+                                  <img class="front-face" src="assets/images/quiz/minh.jpg" alt="Aurelia" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="aurelia">
+                                  <img class="front-face" src="assets/images/quiz/minh.jpg" alt="Aurelia" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="vue">
+                                  <img class="front-face" src="assets/images/quiz/nguyen.jpg" alt="Vue" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="vue">
+                                  <img class="front-face" src="assets/images/quiz/nguyen.jpg" alt="Vue" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="angular">
+                                  <img class="front-face" src="assets/images/quiz/phuong.jpg" alt="Angular" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="angular">
+                                  <img class="front-face" src="assets/images/quiz/phuong.jpg" alt="Angular" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="ember">
+                                  <img class="front-face" src="assets/images/quiz/thuan.jpg" alt="Ember" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="ember">
+                                  <img class="front-face" src="assets/images/quiz/thuan.jpg" alt="Ember" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="backbone">
+                                  <img class="front-face" src="assets/images/quiz/vy.jpg" alt="Backbone" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="backbone">
+                                  <img class="front-face" src="assets/images/quiz/vy.jpg" alt="Backbone" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="react">
+                                  <img class="front-face" src="assets/images/quiz/tram.jpg" alt="React" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="react">
+                                  <img class="front-face" src="assets/images/quiz/tram.jpg" alt="React" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="aurelia">
+                                  <img class="front-face" src="assets/images/quiz/minh.jpg" alt="Aurelia" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="aurelia">
+                                  <img class="front-face" src="assets/images/quiz/minh.jpg" alt="Aurelia" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="vue">
+                                  <img class="front-face" src="assets/images/quiz/nguyen.jpg" alt="Vue" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="vue">
+                                  <img class="front-face" src="assets/images/quiz/nguyen.jpg" alt="Vue" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="angular">
+                                  <img class="front-face" src="assets/images/quiz/phuong.jpg" alt="Angular" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="angular">
+                                  <img class="front-face" src="assets/images/quiz/phuong.jpg" alt="Angular" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="ember">
+                                  <img class="front-face" src="assets/images/quiz/thuan.jpg" alt="Ember" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="ember">
+                                  <img class="front-face" src="assets/images/quiz/thuan.jpg" alt="Ember" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="backbone">
+                                  <img class="front-face" src="assets/images/quiz/vy.jpg" alt="Backbone" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="backbone">
+                                  <img class="front-face" src="assets/images/quiz/vy.jpg" alt="Backbone" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                            
+                                <div class="memory-card" data-framework="react">
+                                  <img class="front-face" src="assets/images/quiz/tram.jpg" alt="React" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                                <div class="memory-card" data-framework="react">
+                                  <img class="front-face" src="assets/images/quiz/tram.jpg" alt="React" />
+                                  <img class="back-face" src="assets/images/logo-trang.jpg" alt="JS Badge" />
+                                </div>
+                              </section>
+                            <div class="progress-container">
+                                <button id="restart" class="restart-button">
+                                    Restart Game
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </form> -->
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
